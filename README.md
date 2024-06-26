@@ -7,7 +7,7 @@
       <ul>
         <li>multithreading, </li>
         <li>time sharing, </li>
-        <li>synchronous and asynchronous context switch from timer and keyboard & </li>
+        <li>synchronous and asynchronous context switch from timer and keyboard, </li>
         <li>preemption.</li>
       </ul>
     </div>
