@@ -48,4 +48,3 @@
     <br>
     <div><strong>Read more </strong>👉<a href="https://github.com/matejabogdanovic/University/blob/main/Year2/Semester3/ASP/Trees%20and%20Graphs/13E112ASP_DZ_2324.pdf">📄</a>
     </div>
-  <br>
