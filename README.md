@@ -4,11 +4,7 @@
 
 ### Concurrent And Distributed Programming - KDP
 
-- <div>
       My solutions to common and uncommon synchronization problems in <a href="https://github.com/matejabogdanovic/University/tree/main/Year3/Semester5/KDP/Concurrent">concurrent</a> and <a href="https://github.com/matejabogdanovic/University/tree/main/Year3/Semester5/KDP/Distributed">distributed</a> programming.
-    </div>
-    <br>
-- <div>
 
 ## Semester 4
 
