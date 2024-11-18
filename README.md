@@ -7,6 +7,7 @@
   <div>
       My solutions to common and uncommon synchronization problems in <a href="https://github.com/matejabogdanovic/University/tree/main/Year3/Semester5/KDP/Concurrent">concurrent</a> and <a href="https://github.com/matejabogdanovic/University/tree/main/Year3/Semester5/KDP/Distributed">distributed</a> programming.
   </div>
+
 ## Semester 4
 
 ### Operating Systems 1 - OS1 👉 <a href="https://github.com/matejabogdanovic/University/tree/main/Year2/Semester4/OS1/riscv-simple-kernel">Simple Risc-V Kernel</a>
