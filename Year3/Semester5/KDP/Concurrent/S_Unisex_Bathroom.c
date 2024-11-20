@@ -38,7 +38,7 @@ void men(){
     mutex.signal();
    
     //
-    take_a_massive_shit_in_the_sink();
+    poop();
     //
 
     mutex.wait();
