@@ -20,10 +20,7 @@ void enterRepairman(){
     r++;
   }
   void exitRepairman(){
-    if(ako cekaju muski)
-      pusti muskarce
-    else if(ako cekaju zenske)
-      pusti zene
+    pusti zene ili muskarce da nema izgladnjivanja
   }
 
  void enterX(){ 
@@ -85,15 +82,16 @@ monitor Bathroom{
   int turn = 0; // 0 - musko, 1 - zensko
   cond qm, qw, qr, qc;  
   cond exit;
+  
   void enterRepairman(){
     if(m > 0 || w > 0 || c > 0)
       qr.wait();
     r++;
   }
   void exitRepairman(){
-    if(qm.queue()) // muski
+    if(qm.queue() && (turn == 0 || turn == 1 && qw.empty())) // muski
       {qm.signal();}
-    else if(qw.queue())
+    else if(qw.queue() && (turn == 1|| turn == 0 && qm.empty()))
       {qw.signal();}
   }
 
