@@ -46,6 +46,43 @@ void writer() {
     semw.signal();
     entry.signal();      // oslobodi zapis
 }
+
+// sa barijerom
+int cntR = 0;
+sem mutexr = 1, mutexw = 1, barrier = 1;
+void reader(){
+    barrier.wait();
+    barrier.signal();
+
+    mutexr.wait();
+    cntR++;
+    if(cntR == 1)
+        mutexw.wait();
+    mutexr.signal();
+
+    read();
+
+    mutexr.wait();
+    cntR--;
+    if(cntR == 0)
+        mutexw.signal();
+    mutexr.signal();
+
+}
+
+void writer(){
+    barrier.wait(); // locks barrier
+
+    mutexw.wait();
+    write(); 
+    barrier.signal();
+
+    mutexw.signal();
+   
+}
+
+
+
 // REGIONI
 
 struct RW{
@@ -93,21 +130,34 @@ monitor RW{
     int cntR = 0, cntW = 0;
 
     void startRead(){   
+        if(cntW > 0 || w.queue())
+            r.wait(); 
+        cntR++;
         
+        if(r.queue())
+            r.signal();
     }
 
     void stopRead(){
-
-
-
+        cntR--;
+        if(cntR == 0 && w.queue())
+            w.signal();
     }
 
     void startWrite(){
-
+        if(cntR > 0 || cntW > 0) // || r.queue() visak
+            w.wait();
+        cntW++;
     }
 
     void stopWrite(){
+        cntW--;
 
+        if(r.queue())
+            r.signal();
+        else if(w.queue())
+            w.signal();
+        
     }
 
 

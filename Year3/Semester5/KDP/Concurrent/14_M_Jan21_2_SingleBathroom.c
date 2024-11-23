@@ -28,7 +28,7 @@ void enterRepairman(){
       blokiraj se.
     x++;
         
-    if(ako je pun wc ili domar ceka ili suprotni pol ceka, ne pustaj nikog da udje vise)
+    if(ako je pun wc)
       return;
 
     if(ako ceka dete) // pusti dete
@@ -55,7 +55,7 @@ void enterRepairman(){
       cekaj.
     c++;
 
-    if(ako je pun wc ili domar ceka ili ako ceka suprotni pol od onog koji me je pustio, ne pustaj nikog da udje vise)
+    if(ako je wc pun)
       return;
 
     if(ako su me pustile zene u wc) 
@@ -90,9 +90,9 @@ monitor Bathroom{
   }
   void exitRepairman(){
     if(qm.queue() && (turn == 0 || turn == 1 && qw.empty())) // muski
-      {qm.signal();}
+      qm.signal();
     else if(qw.queue() && (turn == 1|| turn == 0 && qm.empty()))
-      {qw.signal();}
+      qw.signal();
   }
 
   void enterMan(){ 
@@ -100,7 +100,7 @@ monitor Bathroom{
       qm.wait();
     m++;
         
-    if(w+m+c == N || qr.queue() || qw.queue())
+    if(w+m+c == N )// || qr.queue() || qw.queue())
       return;
 
     if(qc.queue()) // pusti dete
@@ -127,13 +127,13 @@ monitor Bathroom{
       qw.wait();
     w++;
 
-    if(w+m+c == N || qr.queue() || qm.queue())
+    if(w+m+c == N) // || qr.queue() || qw.queue())
       return;
 
     if(qc.queue()) // pusti dete
       qc.signal();
-    else if(mw.queue()) // pusti zenu
-      mw.signal();
+    else if(qw.queue()) // pusti zenu
+      qw.signal();
 
   }
   void exitWoman(){
@@ -154,7 +154,7 @@ monitor Bathroom{
       qc.wait();
     c++;
 
-    if(w+m+c == N || qr.queue() || m > 0 && wq.queue() || w > 0 && mq.queue())
+    if(w+m+c == N ) // || qr.queue() || qw.queue())
       return;
 
     if(m > 0 && mq.queue()) // pusti muskarca
