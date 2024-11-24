@@ -7,7 +7,7 @@ void process(int id){
   <ticket[id] = max(ticket)+1;>
   for(int i = 0; i<N; i++){
     if(i == id)continue;
-    <await(ticket[i] == 0 || ticket[i] > ticket[id]);> // bespotrebno ticket[i] == 0
+    <await(ticket[i] == 0 || ticket[i] > ticket[id]);> 
   }
 
   
