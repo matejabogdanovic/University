@@ -1,43 +1,26 @@
 package KreiranjeNiti;
 
-import java.util.concurrent.Semaphore;
 
-import javax.swing.plaf.multi.MultiTextUI;
-
-public class Main {
-
-	
+public class Main{
 
 	public static void main(String[] args) {
-		Thread[] threads = new Thread[10];
-		for (int i = 0; i < 10; i++) {
-			threads[i] = new Thread(new Runnable() {
-				static int var = 0;
-				static Semaphore mutex = new Semaphore(1);
-				@Override
-				public void run() {
-				
-					mutex.acquireUninterruptibly();
-					++var;
-					System.out.println(" var = " + var);
-					mutex.release();
-					
-				}
-			});
-			threads[i].start();
-		}
+		Thread[] threads = new Thread[100];
+		SynMonitor banka  = new SynMonitor(0);
+		for (int i = 0; i < 100; i++) 
+			threads[i] = new Nit(banka, i);
 		
-		for (int i = 0; i < 10; i++) {
+		
+		for (int i = 0; i < 100; i++) {
 			try {
 				threads[i].join();
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 			
 		}
 		
-		System.out.println("Mejn end");
+		banka.printNum();
 	}
 	
 }
