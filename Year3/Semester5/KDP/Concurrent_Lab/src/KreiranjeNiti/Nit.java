@@ -1,9 +1,12 @@
 package KreiranjeNiti;
 
+
+
 public class Nit extends Thread{
-	SynMonitor banka;
+	ReentrantLockMonitor banka;
 	int id;
-	public Nit(SynMonitor banka, int id) {
+	int num = -69;
+	public Nit(ReentrantLockMonitor banka, int id) {
 		this.banka = banka;
 		this.id = id;
 		this.start();
@@ -19,9 +22,12 @@ public class Nit extends Thread{
 			e.printStackTrace();
 		}
 		
-		if (id%2==0) 
-			banka.take(1);
+		if (id%2==0) {
+			num=banka.take(1);
+			System.out.println("Id="+id+" num=" + num);
+		}
 		else 
 			banka.add(1);
+		
 	}
 }
