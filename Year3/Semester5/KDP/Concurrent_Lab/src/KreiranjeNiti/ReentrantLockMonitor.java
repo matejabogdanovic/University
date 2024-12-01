@@ -27,17 +27,16 @@ public class ReentrantLockMonitor {
 		lock.lock();
 		try {
 			while(num == 0) { 
-				try {
-					q.await();
-					System.out.println("Budim se, num = " + num);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+	
+				q.awaitUninterruptibly();
+				System.out.println("Budim se, num = " + num);
+				
 			}
 			num -= n;
 			return num;
-		} finally {
+			
+		} 
+		finally {
 			lock.unlock();
 		}
 	}

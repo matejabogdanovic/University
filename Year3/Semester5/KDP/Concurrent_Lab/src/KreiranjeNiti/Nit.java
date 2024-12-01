@@ -23,6 +23,7 @@ public class Nit extends Thread{
 		}
 		
 		if (id%2==0) {
+			this.interrupt();
 			num=banka.take(1);
 			System.out.println("Id="+id+" num=" + num);
 		}
