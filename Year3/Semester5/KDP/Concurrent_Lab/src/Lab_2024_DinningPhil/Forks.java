@@ -1,4 +1,4 @@
-package DinningPhil;
+package Lab_2024_DinningPhil;
 
 public class Forks {
 	int ticket = 0;

@@ -1,4 +1,4 @@
-package DinningPhil;
+package Lab_2024_DinningPhil;
 
 //import java.util.concurrent.atomic.AtomicInteger;
 
