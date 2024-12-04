@@ -1,4 +1,4 @@
-package Shared;
+package SleepingBarber;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentLinkedQueue;

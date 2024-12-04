@@ -1,4 +1,4 @@
-package Shared;
+package SleepingBarber;
 
 public class Brica extends Thread {
 	private long zarada = 0;
@@ -44,7 +44,7 @@ public class Brica extends Thread {
 				sledeci();
 				Thread.sleep((int)Math.random()*1000+100); // sisanje traje
 				naplati();
-				Thread.sleep((int)Math.random()*1000+100); // sisanje traje
+				Thread.sleep((int)Math.random()*1000+100); 
 			}
 		} catch (InterruptedException e) {
 			// TODO: handle exception
