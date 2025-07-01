@@ -1,7 +1,7 @@
 
 [R(i:1..RCNT):reader||W(j:1..WCNT):writer||C:coordinator]
 
-
+// NE VALJA
 
 // WRITERS PREFERRED
 reader::*[
