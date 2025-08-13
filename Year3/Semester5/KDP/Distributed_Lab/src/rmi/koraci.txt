@@ -1,0 +1,17 @@
+1. Napravi se interfejs koji prosiruje Remote.
+Njegove deklarisane metode treba da bacaju RemoteException.
+
+2. Implementiramo interfejs. Ukoliko ce objekat biti u registru
+onda je to to. Ukoliko nece biti u registru, implementiramo jos
+i Serializable i prosirimo UnicastRemoteObject. Sada, objekat
+koji je u registru moze da vraca ovaj objekat bez da ga ubacimo
+u registar, samo treba da vraca objekat preko njegovog interfejsa.
+
+3. Napravimo policy fajl. U Run configuration i za klijenta i za
+servera moramo staviti u VM arguments -> -Djava.security.policy=src/rmi/java.policy
+
+4. Serverska i klijentska strana (dato je kako se pravi).
+Napomena da se objekat castuje i cuva preko interfejsa u registru.
+
+Kad klijent pozove metodu remote objekta, ta metoda
+se izvrsava na serverskoj strani.
