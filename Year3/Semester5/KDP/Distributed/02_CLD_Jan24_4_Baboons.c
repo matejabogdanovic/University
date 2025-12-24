@@ -10,33 +10,54 @@
 // програм који решава овај проблем.
 
 
-const int MAX = 5;
-
 void baboon1(){
-
+  bool wait = false;
   while(1){
-    
-    if(inp("turn", 0))out("turn", 1);
-    out("bw1");
-    rd("turn", 1); // wait for our turn
+    in("cross", ?can_cross, ?crossing, ?wtc1, ?wtc2, ?turn);
+    if(turn == 0){ // niciji red, onda je moj
+      turn = 1;
+      crossing++;
 
-    
-    in("slot");
+    }else // moj red i manje od 5 babuna i niko ne ceka  
+    if (turn == 1 && can_cross && wtc1 == 0 && wtc2 == 0){
+      crossing++;
+      if(crossing == 5)can_cross = false; // ako je 5 babuna onda ne daj da prodju vise 
+    }else{ // inace cekaj
+      wtc1++; 
+      wait = true;
+    }
+    out("cross", can_cross, crossing, wtc1, wtc2, turn);
+    if(wait){// ako cekas
+      // cekaj da mozes da prodjes i da je tvoj red
+      in("cross", true, ?crossing, ?wtc1, ?wtc2, 1);
+      crossing++;
+      wtc1--;
+      if(crossing == 5)can_cross = false;
+      out("cross", can_cross, crossing, wtc1, wtc2, turn);
+    }
+
     // cross
-    out("slot");
-    in("bw1");
-    if(rdp("bw2"))
 
-
+    in("cross", ?can_cross, ?crossing, ?wtc1, ?wtc2, ?turn);
+    crossing--;
+    if(wtc2 > 0){ // ako je neko cekao, reci da vise ne sme da se prodje
+      can_cross = false;
+    }
+    // ako sam poslednji
+    if(crossing == 0){
+      if(wtc2 > 0){ // pusti da prodje drugi copor
+        turn = 2;
+        can_cross = true;
+      }else{ // ako ne ceka drugi copor, pusti bilo kog da prodje
+        turn = 0; can_cross = true;
+      }
+    }
+    out("cross", can_cross, crossing, wtc1, wtc2, turn);
 
   }
 
 }
 
 void init(){
-  for(...)eval(baboon1());
-  for(...)eval(baboon2());
-  for(int i = 0; i<MAX; i++)out("slot"); // 5 slots
-
 
 }
