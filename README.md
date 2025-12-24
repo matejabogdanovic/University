@@ -2,8 +2,8 @@
 
 ## Semester 7
 
-### Inteligent Systems - INTSIS 👉 <a href="https://github.com/matejabogdanovic/University/tree/main/Year4/Semester7/INTSIS/HW1">Search Algorithms Visualisation in Pygame</a>
-
+### Inteligent Systems - INTSIS 
+- Homework 1 👉 <a href="https://github.com/matejabogdanovic/University/tree/main/Year4/Semester7/INTSIS/HW1">Search Algorithms Visualisation in Pygame</a>
 ## Semester 6
 
 ### System Software - SS 👉 <a href="https://github.com/matejabogdanovic/SS-Assembler-Linker-Emulator">Assembler, Linker & Emulator</a>
