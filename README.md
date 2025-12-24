@@ -6,12 +6,12 @@
 - Homework 1 👉 <a href="https://github.com/matejabogdanovic/University/tree/main/Year4/Semester7/INTSIS/HW1">Search Algorithms Visualisation in Pygame</a>
 ## Semester 6
 
-### System Software - SS 👉 <a href="https://github.com/matejabogdanovic/SS-Assembler-Linker-Emulator">Assembler, Linker & Emulator</a>
-
-### Computer Organization And Architecture 2 - AOR2 👉 <a href="https://github.com/matejabogdanovic/AOR2-KVM-Virtual-Machine">Mini Hypervisor Project</a>
-	
-### Web Programming - PIA 👉 <a href="https://github.com/matejabogdanovic/PIA-MEAN-Mountain-Cottage">Cottage Booking App</a>
-
+### System Software - SS 
+- Full toolchain 👉 <a href="https://github.com/matejabogdanovic/SS-Assembler-Linker-Emulator">Assembler, Linker & Emulator</a>
+### Computer Organization And Architecture 2 - AOR2 
+- KVM 👉 <a href="https://github.com/matejabogdanovic/AOR2-KVM-Virtual-Machine">Mini Hypervisor Project</a>
+### Web Programming - PIA 
+- MEAN 👉 <a href="https://github.com/matejabogdanovic/PIA-MEAN-Mountain-Cottage">Cottage Booking App</a>
 ## Semester 5
 
 ### Concurrent And Distributed Programming - KDP 
