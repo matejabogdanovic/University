@@ -1,9 +1,9 @@
 # Homework 1
 
 Implementation of basic search algorithms:
-	- DFS
-	- Branch and bound
-	- A*
+- DFS
+- Branch and bound
+- A*
 
 To run simulation make sure to install `pygame` and then in terminal type:
 ```
