@@ -1,8 +1,20 @@
 # Projects - University of Electrical Engineering
 
+## Semester 7
+
+### Inteligent Systems - INTSIS 👉 <a href="https://github.com/matejabogdanovic/University/tree/main/Year4/Semester7/INTSIS/HW1">Search Algorithms Visualisation in Pygame</a>
+
+## Semester 6
+
+### System Software - SS 👉 <a href="https://github.com/matejabogdanovic/SS-Assembler-Linker-Emulator">Assembler, Linker & Emulator</a>**
+
+### Computer Organization And Architecture 2 - AOR2 👉 <a href="https://github.com/matejabogdanovic/AOR2-KVM-Virtual-Machine">Mini Hypervisor Project</a>**
+	
+### Web Programming - PIA 👉 <a href="https://github.com/matejabogdanovic/PIA-MEAN-Mountain-Cottage">Cottage Booking App</a>**	
+
 ## Semester 5
 
-### Concurrent And Distributed Programming - KDP
+### Concurrent And Distributed Programming - KDP 
 
   <div>
       My solutions to common and uncommon synchronization problems in <a href="https://github.com/matejabogdanovic/University/tree/main/Year3/Semester5/KDP/Concurrent">concurrent</a> and <a href="https://github.com/matejabogdanovic/University/tree/main/Year3/Semester5/KDP/Distributed">distributed</a> programming.

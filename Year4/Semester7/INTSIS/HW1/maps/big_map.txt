@@ -1,0 +1,16 @@
+10,0
+0,10
+rwrrrrrrrrr
+mrrwrmrtrrr
+mrrrrmrwrwr
+mrrrrrrrrrr
+mmrrrwwrrrr
+rrrrrtrrrrr
+rrrrrrrrrrr
+rrrrtrrrrrr
+rrrrrrtrrrr
+rtrrtrrrrrr
+rrtrrrrrrrr
+
+
+
