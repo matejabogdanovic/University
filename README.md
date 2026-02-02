@@ -4,6 +4,8 @@
 
 ### Inteligent Systems - INTSIS 
 - Homework 1 👉 <a href="https://github.com/matejabogdanovic/University/tree/main/Year4/Semester7/INTSIS/HW1">Search Algorithms Visualisation in Pygame</a>
+
+- Homework 2 👉 <a href="https://github.com/matejabogdanovic/University/tree/main/Year4/Semester7/INTSIS/HW2">Sequential Games - MaxN, MiniMax, Minimax Alpha-Beta</a>
 ## Semester 6
 
 ### System Software - SS 
